@@ -3,4 +3,24 @@
   <groupId>500061070</groupId>
   <artifactId>meet_devops</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url> http://localhost:9000 </sonar.host.url>
+                 <maven.compiler.source>1.8</maven.compiler.source>
+     			 <maven.compiler.target>1.8</maven.compiler.target>
+	<!--Uncomment below few lines if you are using external databases(Oracle/DB2/Mysql) -->
+ <!--  <sonar.jdbc.url>your database url</sonar.jdbc.url>
+<sonar.jdbc.driver>your DB driver</sonar.jdbc.driver>
+<sonar.jdbc.username>DB username</sonar.jdbc.username>
+<sonar.jdbc.password>DB password</sonar.jdbc.password>        -->              
+
+            </properties>
+        </profile>
+     </profiles>
 </project>
