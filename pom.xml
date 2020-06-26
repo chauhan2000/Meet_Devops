@@ -8,7 +8,7 @@
 <distributionManagement>
     <snapshotRepository>
       <id>nexus01</id>
-      <url>http://localhost:8081/repository/nexus_repo/</url>
+      <url>http://localhost:8082/repository/meetdevops-snap/</url>
     </snapshotRepository>
 </distributionManagement>
   <build>
@@ -36,7 +36,7 @@
       </executions>
       <configuration>
         <serverId>nexus01</serverId>
-        <nexusUrl>http://localhost:8081/</nexusUrl>
+        <nexusUrl>http://localhost:8082/</nexusUrl>
         <skipStaging>true</skipStaging>
       </configuration>
     </plugin>
@@ -59,7 +59,7 @@
             </activation>
             <properties>
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
-                <sonar.host.url> http://localhost:9000 </sonar.host.url>
+                <sonar.host.url> http://localhost:8090 </sonar.host.url>
                  <maven.compiler.source>1.8</maven.compiler.source>
      			 <maven.compiler.target>1.8</maven.compiler.target>
 	<!--Uncomment below few lines if you are using external databases(Oracle/DB2/Mysql) -->
